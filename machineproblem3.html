@@ -7,56 +7,63 @@
 <script type="text/javascript">
 	<!--
 	function gradeAvg() {
+
+	var status = true;
+
+	while(status) {
+
 		var grade = prompt("Enter your grade", "Your average");
 		
 			switch(true)
 			{
 				case (grade <= 100 && grade >= 96): 
 					document.write("A+<br/>");
+					status(false);
 					break;
 				case (grade <= 95 && grade >= 91): 
 					document.write("A<br/>");
+					status(false);
 					break;
 				case (grade <= 90 && grade >= 86): 
 					document.write("A-<br/>");
+					status(false);
 					break;
 				case (grade <= 85 && grade >= 81): 
 					document.write("B+<br/>");
+					status(false);
 					break;
 				case (grade <= 80 && grade >= 76): 
 					document.write("B<br/>");
+					status(false);
 					break;
 				case (grade <= 75 && grade >= 71): 
 					document.write("B-<br/>");
+					status(false);
 					break;
 				case (grade <= 70 && grade >= 66): 
 					document.write("C+<br/>");
+					status(false);
 					break;
 				case (grade <= 65 && grade >= 61): 
 					document.write("C<br/>");
+					status(false);
 					break;
 				case (grade <=  60 && grade >= 56): 
 					document.write("C-<br/>");
+					status(false);
 					break;
 				case (grade <=  55 && grade >= 51): 
 					document.write("INCOMPLETE<br/>");
+					status(false);
 					break;
 				case (grade <=  50 && grade >= 1): 
 					document.write("FAILED<br/>");
+					status(false);
 					break;
-				default: while(true) {
-					alert("Reenter correct grade");
-					gradeAvg();
-					exit();
-
-				};
-			
-
-
-
-
-
+				default: alert("Reenter correct grade");
 			}
+
+		}
 	}
 	//-->
 </script>
