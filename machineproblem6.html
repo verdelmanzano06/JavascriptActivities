@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Machine Problem 6</title>
+	<style>
+	
+	.red {
+     	 width: 100px;
+      	height: 100px;
+      	-webkit-border-radius: 25px;
+      	-moz-border-radius: 25px;
+     	 border-radius: 50px;
+      	background: red;
+    }
+    .green {
+     	 width: 100px;
+      	height: 100px;
+      	-webkit-border-radius: 25px;
+      	-moz-border-radius: 25px;
+     	 border-radius: 50px;
+      	background: green;
+    }
+    .yellow {
+     	 width: 100px;
+      	height: 100px;
+      	-webkit-border-radius: 25px;
+      	-moz-border-radius: 25px;
+     	 border-radius: 50px;
+      	background: yellow;
+    }
+    .white {
+    	width: 100px;
+      	height: 100px;
+      	-webkit-border-radius: 25px;
+      	-moz-border-radius: 25px;
+     	 border-radius: 50px;
+      	background: white;
+    }
+    #traffic-light {
+    	border: 5px solid black;
+    	width: 100px;
+    	height: 300px;
+    	margin: auto;
+    	padding: 5px;
+
+    }
+
+	</style>
+</head>
+<body>
+<div id="traffic-light">
+	<div id="stop"></div>
+	<div id="warning"></div>
+	<div id="go"></div>
+</div>	
+
+	<script type="text/javascript">
+
+
+		var rd = "red";
+		var yw = "yellow";
+		var gn = "green";
+		var wh = "white";
+
+
+		setTimeout(function() { document.getElementById('stop').setAttribute('class',rd); }, 0);
+
+
+		setTimeout(function() { document.getElementById('stop').setAttribute('class',wh); }, 5000);
+		setTimeout(function() { document.getElementById('warning').setAttribute('class',wh); }, 5000);
+
+		setTimeout(function() { document.getElementById('go').setAttribute('class',gn); }, 5000);
+		setTimeout(function() { document.getElementById('go').setAttribute('class',wh); }, 15000);
+
+		setTimeout(function() { document.getElementById('warning').setAttribute('class',yw); }, 15000);
+		setTimeout(function() { document.getElementById('warning').setAttribute('class',wh); }, 18000);
+
+		setTimeout("location.reload(true);", 18000);
+	</script>
+</body>
+</html>
